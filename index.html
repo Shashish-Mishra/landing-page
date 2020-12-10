@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+
+    <title>OSLO</title>
+
+    <style type="text/css">
+        .carousel-item {
+            height: 650px;
+            width: 100%;
+            background: black;
+            overflow: hidden;
+            background: #d61385;
+            background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
+            background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
+            background-repeat: no-repeat;
+        }
+        
+        .carousel-inner {
+            font-family: 'Xanh Mono', monospace;
+            color: white;
+            text-align: center;
+        }
+        
+        .img-button {
+            background-color: white;
+            color: #d61385;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 0px;
+        }
+        
+        .about-button {
+            background-color: #d61385;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .row {
+            background-color: white;
+            color: #d61385;
+            font-family: 'Xanh Mono', monospace;
+            text-align: center;
+        }
+        
+        .about-image {
+            background-color: white;
+        }
+        
+        .circle {
+            border-bottom-right-radius: 45%;
+            border-bottom-left-radius: 10%;
+            border-top-left-radius: 10%;
+            border-top-right-radius: 45%;
+            border: 6px solid #d61385;
+        }
+        
+        #slider {
+            width: 70%;
+            height: 400px;
+            margin: auto;
+            position: relative;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        
+        #slider .slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slider .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        
+        #slider .slide .text {
+            width: 100%;
+            height: 100%;
+            background: #8fc6eb;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #slider .slide:first-child {
+            display: block;
+        }
+        
+        #slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        #slider .pager {
+            font-size: 14px;
+            font-weight: 900;
+            color: #777;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        #slider .arrows a {
+            position: absolute;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.65);
+            top: 43%;
+            left: 15px;
+            font-weight: 400;
+            line-height: 1;
+            font-size: 42px;
+        }
+        
+        #slider .arrows a:hover {
+            color: #fff;
+        }
+        
+        #slider .arrows a.next {
+            left: initial;
+            right: 15px;
+        }
+        
+        .footerdot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border-radius: 50%;
+            display: inline-block;
+            color: #bbbbbb;
+        }
+        
+        .active,
+        .footerdot:hover {
+            background-color: black;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg  navbar-light " style="background-color:white; font-family: 'Xanh Mono', monospace;">
+            <a class="navbar-brand">
+                <h1 style="color:#f5169c;">OSLO</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item active">
+
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">
+                            <h5 style="color: #f5169c;">HOME</h5> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <h5 style="color: #f5169c">ABOUT</h5>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary" style="border-radius: 10px; background-color: #f5169c; border: 0px;">Sign In</button>
+
+            </div>
+        </nav>
+
+
+
+
+
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h1 class="corousel-image" style="margin-top: 150px; font-size: 80px; color:white;">UNLEESH YOUR POTENTIAL</h1>
+                    <p class="img-text" style="color: white">Just a small line of code to make this landing page very very beutiful.You must be thinking positive<br> and doing very positive things in order to maintain your responsibility towards the esteemed organistaion.</p>
+                    <button class="img-button">Read more.</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="slider" class="mt-5 mb-5">
+            <div class="slides-container">
+                <div class="slide" id="1"><img class="img-fluid" src="img.jpg" alt="Slider img 1"></div>
+                <div class="slide" id="2"><img class="img-fluid" src="person.jpg" alt="Slider img 2"></div>
+                <div class="slide" id="3"><img class="img-fluid" src="laptop.png" alt="Slider img 3"></div>
+            </div>
+
+            <div class="arrows">
+                <a class="prev" href="#">
+                    <</i>
+                </a>
+                <a class="next" href="#">></a>
+            </div>
+
+            <div class="pager">
+                1 / 3
+            </div>
+
+            <div style="text-align:center">
+                <span class="footerdot">1
+                </span>
+                <span class="footerdot">2
+                </span>
+                <span class="footerdot">3 
+                </span>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="row featurette mt-5">
+            <div class="col-md-7">
+                <h2 class="featurette-heading" style="text-align: center;">We all want our jobs to run smoothly.</h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                <button class="about-button">Read More</button>
+            </div>
+            <div class="col-md-5">
+                <span class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect>
+            <div class="bordering" style="background-image: url('pic.jpeg'); height: 300px; width: 70%; border-bottom-left-radius: 10%; border-top-left-radius: 10%; border-bottom-right-radius: 45%; border-top-right-radius: 45%;">
+
+                <div style="height: 250px; width: 70%; border-bottom-left-radius: 10%; border-top-left-radius: 10%; border-top-right-radius: 45%; border-bottom-right-radius: 45%; margin-left: 150px; border: 2px solid #d61385;"></div>
+            </div>
+            
+       </span>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <span class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect><i x="50%" y="50%" fill="#eceeef" dy=".3em" class="fa fa-bars" aria-hidden="true" style="font-size: 100px;color:  #d61385;"></i></span>
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <span class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect><i x="50%" y="50%" fill="#eceeef" dy=".3em" class="fa fa-users" aria-hidden="true" style="font-size: 100px;color:  #d61385;"></i></span>
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <span class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect><i x="50%" y="50%" fill="#eceeef" dy=".3em" class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 100px;color:  #d61385;"></i></span>
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row featurette mt-5">
+
+
+                <div class="col-md-6">
+
+
+
+                    <div style="height: 250px; width: 80%; border-bottom-left-radius: 10%; border-top-left-radius: 10%; border-top-right-radius: 45%; border-bottom-right-radius: 45%; border: 2px solid #d61385;margin-left: 20px;">
+                        <div class="bordering" style="background-image: url('pic.jpeg'); height: 300px; width: 80%; border-bottom-left-radius: 10%; border-top-left-radius: 10%; border-bottom-right-radius: 45%; border-top-right-radius: 45%; margin-top: 20px; margin-left: 20px;">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <h2 class="featurette-heading" style="text-align: center; margin-top: 100px;">We all want our jobs to run smoothly.</h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    <button class="about-button">Read More</button>
+                </div>
+            </div>
+
+
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column mt-5" style="background-color: #e6f3f7">
+
+                <main role="main" class="inner cover">
+                    <h1 class="cover-heading">Cover your page.</h1>
+                    <img class="img-fluid" src="laptop.png" style="height: auto; width: auto;">
+                    <p class="lead">Cover is a one-page template for building simple and beautiful home pages.</p>
+
+                </main>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <span class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><img src="person.jpg" class="img-fluid" style="border-radius: 50%;"></span>
+                    <h2>Suzi Huller</h2>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <span class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><img src="person.jpg" class="img-fluid" style="border-radius: 50%;"></span>
+                    <h2>Suzi Huller</h2>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <span class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><img src="person.jpg" class="img-fluid" style="border-radius: 50%;"></span>
+                    <h2>Suzi Huller</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
+                        amet risus.</p>
+
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+
+            <div class="row mt-5" style="background-color: #d61385; color: white; width: auto;">
+                <div class="col-lg-8 mt-2">
+                    <h1>Do you want to be notified when we Launch!</h1>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <button class="img-button mb-4">Sign Up</button>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="row mt-5" style="background-image: url('laptop.jpg'); opacity: 0.5; width: auto; height: auto;">
+                    <div class="col-lg-8 mt-4">
+                        <h1 style="color: black; text-align: center; font-size: 70px;">Get Creative with <em style="color: #d61385"> this</em><br> Revolution tool</h1>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <form>
+                            <div class="form-group">
+                                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Date">
+                            </div>
+                            <div class="form-group">
+                                <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="time">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="enail" class="form-control" id="exampleFormControlInput1" placeholder="email">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="message"></textarea>
+                            </div>
+                            <button class="img-button" style="background-color:  #d61385; width: 100%; color: white;">Send</button>
+                        </form>
+                    </div>
+
+                </div>
+
+
+
+                <footer class="mastfoot mt-4">
+                    <div class="row">
+                        <div class="col-lg-4" style="color: black;">
+                            <p>
+                                <i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 40px;"></i>&nbsp;
+                                <i class="fa fa-twitter" aria-hidden="true" style="font-size: 40px;"></i>&nbsp;
+                                <i class="fa fa-instagram" aria-hidden="true" style="font-size: 40px;"></i>&nbsp;
+                            </p>
+                        </div>
+                        <div class="col-lg-4" style="color: black;">
+                            <h1 style="font-size: 35px; color:  #d61385"> OSLO </h1>
+                            <h5 style="font-size: 20px;"><i class="fa fa-heart" aria-hidden="true" style="color:  #d61385">&nbsp;</i>Crafted Lovingly With <em>Page Cloud</em></h5>
+                        </div>
+                        <div class="col-lg-4" style="color: black;">
+                            <p style="font-size: 25px; margin-left: 20px;">
+                                Features Reviews
+                            </p>
+
+                        </div>
+
+                    </div>
+                </footer>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
+
+
+        <script>
+            function SimpleSlider(element = 'slider', auto = false, pause) {
+                var $this = $(element);
+                var slidesCont = $this.children('.slides-container');
+                var slides = slidesCont.children('.slide');
+                var pager = $this.children('.pager');
+                var arrowsCont = $this.children('.arrows');
+                var prevSlide = arrowsCont.children('.prev');
+                var nextSlide = arrowsCont.children('.next');
+                var slidesCount = slides.length;
+                var currentSlideIndex = 1;
+                var currentSlide = slides.first();
+                var autoPlay = null;
+                slides.not(':first').css('display', 'none');
+                currentSlide.addClass('active');
+
+                function fadeNext() {
+                    currentSlide.removeClass('active').fadeOut(700);
+
+                    if (currentSlideIndex == slidesCount) {
+                        currentSlide = slides.first();
+                        currentSlide.delay(500).addClass('active').fadeIn(700);
+                        currentSlideIndex = 1;
+                    } else {
+                        currentSlideIndex++;
+                        currentSlide = currentSlide.next();
+                        currentSlide.delay(500).addClass('active').fadeIn(700);
+                    }
+                    pager.text(currentSlideIndex + ' / ' + slidesCount);
+                }
+
+                function fadePrev() {
+                    currentSlide.removeClass('active').fadeOut(700);
+
+                    if (currentSlideIndex == 1) {
+                        currentSlide = slides.last();
+                        currentSlide.delay(500).addClass('active').fadeIn();
+                        currentSlideIndex = slidesCount;
+                    } else {
+                        currentSlideIndex--;
+                        currentSlide = currentSlide.prev();
+                        currentSlide.delay(500).addClass('active').fadeIn(700);
+                    }
+
+                    pager.text(currentSlideIndex + ' / ' + slidesCount);
+                }
+
+                function AutoPlay() {
+                    clearInterval(autoPlay);
+
+                    if (auto == true)
+                        autoPlay = setInterval(function() {
+                            fadeNext()
+                        }, pause);
+                }
+                $(nextSlide).click(function(e) {
+                    e.preventDefault();
+                    fadeNext();
+                    AutoPlay();
+                });
+                $(prevSlide).click(function(e) {
+                    e.preventDefault();
+                    fadePrev();
+                    AutoPlay();
+                });
+
+                $('.footerdot').click(function() {
+                    currentDotIndex = $(this).html();
+                    // console.log(currentDotIndex)
+                    if (currentDotIndex == 1) {
+                        if (currentSlideIndex == 2) {
+                            fadePrev();
+                        } else if (currentSlideIndex == 3) {
+                            fadeNext();
+                        }
+                    } else if (currentDotIndex == 2) {
+                        if (currentSlideIndex == 1) {
+                            fadeNext();
+                        } else if (currentSlideIndex == 3) {
+                            fadePrev();
+                        }
+                    } else {
+                        if (currentSlideIndex == 1) {
+                            fadePrev();
+                        } else if (currentSlideIndex == 2) {
+                            fadeNext();
+                        }
+                    }
+                })
+                AutoPlay();
+            }
+            $(function() {
+                SimpleSlider('#slider', true, 4000);
+            });
+        </script>
+
+</body>
+
+
+
+</html>
